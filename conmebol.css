@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-BlackIt.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-BoldIt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-LightIt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-MediumIt.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-SemiBoldIt.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-SemiLight.ttf') format('truetype');
+    font-weight: 350;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-SemiLightIt.ttf') format('truetype');
+    font-weight: 350;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conmebol';
+    src: url('E:/SERVER JCN/plugins/branding-sf/BrandingSF-ThinIt.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* Ejemplo de uso */
+body {
+    font-family: 'Conmebol', sans-serif;
+    font-weight: 500; /* Por ejemplo, puedes cambiar el peso aquí */
+}
