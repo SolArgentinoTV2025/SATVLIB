@@ -18,59 +18,57 @@
 
   <!-- Aquí agregamos el script para cargar los partidos dinámicamente -->
   <script>
-    async function cargarPartidosLibertadores() {
-      try {
-        // Usamos tu clave de API
-        const apiKey = 'da847ec90e9cb93b74fac955dc9e4fa2';
-        
-        // URL para obtener los partidos de la Copa Libertadores 2025 (ID: 6954 o 13)
-        const url = `https://api.football-data.org/v4/competitions/6954/matches`; // O usa "13" si es necesario
+async function cargarPartidosLibertadores() {
+  try {
+    const apiKey = 'da847ec90e9cb93b74fac955dc9e4fa2';
+    const url = 'https://api.football-data.org/v4/competitions/6954/matches';
 
-        const respuesta = await fetch(url, {
-          method: 'GET',
-          headers: {
-            'X-Auth-Token': apiKey, // Autenticamos con tu clave de API
-          }
-        });
-        
-        const datos = await respuesta.json();
+    const respuesta = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'X-Auth-Token': apiKey,
+      },
+    });
 
-        // Filtramos solo los partidos de la Fase 2 (basados en las fechas de los partidos)
-        const partidosFase2 = datos.matches.filter(partido => {
-          const fechaPartido = new Date(partido.utcDate);
-          return fechaPartido >= new Date('2025-02-20'); // Solo partidos a partir del 20 de febrero
-        });
-
-        // Contenedor donde se van a mostrar los partidos de la Fase 2
-        const fixtureDiv = document.getElementById('fixture');
-        fixtureDiv.innerHTML = ''; // Limpiar los partidos existentes en el contenedor
-
-        partidosFase2.forEach(partido => {
-          // Solo cargamos los partidos de vuelta
-          if (partido.stage === 'ROUND_2' && partido.homeTeam && partido.awayTeam) {
-            const partidoHTML = `
-              <div class="partido">
-                <div class="equipo1">
-                  <p>${partido.homeTeam.name}</p>
-                </div>
-                <div class="resultado">${partido.score.fullTime.homeTeam || '-'} - ${partido.score.fullTime.awayTeam || '-'}</div>
-                <div class="equipo2">
-                  <p>${partido.awayTeam.name}</p>
-                </div>
-                <div class="fecha">${new Date(partido.utcDate).toLocaleString()}</div>
-                <div class="tipopartido">${partido.stage}</div>
-              </div>
-            `;
-            fixtureDiv.innerHTML += partidoHTML; // Añadir el partido al contenedor
-          }
-        });
-      } catch (error) {
-        console.error('Error al cargar los partidos:', error);
-      }
+    if (!respuesta.ok) {
+      throw new Error('No se pudieron cargar los datos de la API');
     }
 
-    // Llamamos a la función para cargar los partidos al cargar la página
-    document.addEventListener('DOMContentLoaded', cargarPartidosLibertadores);
+    const datos = await respuesta.json();
+    const partidosFase2 = datos.matches.filter(partido => {
+      const fechaPartido = new Date(partido.utcDate);
+      return fechaPartido >= new Date('2025-02-20');
+    });
+
+    const fixtureDiv = document.getElementById('fixture');
+    fixtureDiv.innerHTML = '';
+
+    partidosFase2.forEach(partido => {
+      if (partido.stage === 'ROUND_2' && partido.homeTeam && partido.awayTeam) {
+        const partidoHTML = `
+          <div class="partido">
+            <div class="equipo1">
+              <p>${partido.homeTeam.name}</p>
+            </div>
+            <div class="resultado">${partido.score.fullTime.homeTeam || '-'} - ${partido.score.fullTime.awayTeam || '-'}</div>
+            <div class="equipo2">
+              <p>${partido.awayTeam.name}</p>
+            </div>
+            <div class="fecha">${new Date(partido.utcDate).toLocaleString()}</div>
+            <div class="tipopartido">${partido.stage}</div>
+          </div>
+        `;
+        fixtureDiv.innerHTML += partidoHTML;
+      }
+    });
+  } catch (error) {
+    console.error('Error al cargar los partidos:', error);
+    const fixtureDiv = document.getElementById('fixture');
+    fixtureDiv.innerHTML = `<p>No se pudieron cargar los partidos. Intenta nuevamente más tarde.</p>`;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', cargarPartidosLibertadores);
   </script>
 </body>
 </html>
