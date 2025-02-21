@@ -85,6 +85,7 @@ background-clip: text;
 .video-option:hover {
     background: #000; /* Mantiene el fondo negro */
     : #fff; /* Asegura que el color base no desaparezca */
+    cursor: pointer;
 }
 
 .video-option:hover span {
