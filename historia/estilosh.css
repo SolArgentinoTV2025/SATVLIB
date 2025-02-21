@@ -311,7 +311,7 @@ font-weight: 600;
   margin-left: 0.5em;
 }
 
-.escudo {
+img .escudo {
     width: 10px; /* Unidades relativas al ancho de la ventana */
     height: 10px; /* Mantiene la relación de aspecto */
     position: absolute;
