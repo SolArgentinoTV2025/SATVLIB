@@ -1,4 +1,4 @@
-@import url('https://cdn.jsdelivr.net/gh/SolArgentinoTV2025/SATVLIB@main/conmebol.css');
+@import url('fuentes/conmebol.css');
 
 /* Estilos Generales */
 body {
@@ -155,7 +155,7 @@ font-weight: 600;
   color: #000000;
   top: 50%;
   transform: translateY(-50%);
-  left: 44%;
+  left: 45.1%;
 }
 
 .rguion {
@@ -166,7 +166,7 @@ font-weight: 600;
   color: #000000;
   top: 50%;
   transform: translateY(-50%);
-  left: 47%;
+  left: 48.1%;
 }
 
 /* Fechas */
