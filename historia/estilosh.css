@@ -1,4 +1,4 @@
-@import url('fuentes/conmebol.css');
+@import url('../fuentes/conmebol.css');
 
 /* Estilos Generales */
 body {
@@ -15,14 +15,7 @@ body {
   font-size: 1rem; /* Base en em */
 }
 
-.aviso {
-position: absolute;
-top: 5em;
-background: var(--gold-gradient);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-font-weight: 700;
-}
+.aviso {position: absolute;top: 3em;background: var(--gold-gradient);-webkit-background-clip: text;-webkit-text-fill-color: transparent;font-weight: 700;}
 
 /* Colores */
 :root {
@@ -71,7 +64,11 @@ h1 {
 }
 
 h2 {
-  top: 3em;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  top: 1.3em;
 }
 
 /* Contenedor principal de los partidos */
@@ -99,7 +96,10 @@ h2 {
 }
 
 p {
-  color: #000;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: justify;
 }
 
 /* Partidos */
