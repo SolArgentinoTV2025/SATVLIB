@@ -11,10 +11,11 @@
       "permanent": true
     }
   ],
+{
   "rewrites": [
     {
-      "source": "/:path*",
-      "destination": "/:path*.html"
+      "source": "/:folder/:subfolder",
+      "destination": "/:folder/:subfolder/:subfolder.html"
     }
   ]
 }
