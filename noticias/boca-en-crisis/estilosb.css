@@ -102,7 +102,19 @@ h2.ganadoresp {
 }
 
 .bloque-titulo p {
-    margin-bottom: 0em;
+    margin-top: -1em;
+    text-align: justify;
+    font-size: 1.2em;
+    align-items: center;
+}
+
+.bloque-resumen p {
+    position: relative;
+    margin-top: -1.3em;
+}
+
+.bloque-resumen h2 {
+    font-size: 2em;
 }
 
 ul.ganadores {border-radius: 0.3em;background: var(--gold-gradient);}
