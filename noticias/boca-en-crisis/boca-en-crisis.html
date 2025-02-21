@@ -8,6 +8,53 @@
     <script src="https://cdn.jsdelivr.net/npm/fluid-player@latest/dist/fluidplayer.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fluid-player@latest/dist/fluidplayer.min.css">
     <title>Boca Juniors en crisis: ¿Posible caída en la Copa Libertadores?</title>
+    <style>
+        /* Ajustamos el reproductor a una relación de aspecto 16:9 */
+        .video-player-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            z-index: 1000; /* Aseguramos que el reproductor esté sobre otros elementos */
+        }
+
+        .video-player-wrapper iframe, .video-player-wrapper div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Estilo del dropdown */
+        .dropdown-menu {
+            background-color: #333; /* Fondo oscuro para el menú */
+            border-radius: 8px;
+            padding: 10px 0;
+        }
+
+        .dropdown-item {
+            color: #FFFF00; /* Color de texto amarillo */
+            padding: 10px 20px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #555; /* Fondo oscuro al pasar el mouse */
+            color: white; /* Cambia el color de texto al pasar el mouse */
+        }
+
+        .dropdown-toggle {
+            background-color: #FFFF00; /* Botón amarillo */
+            color: #333; /* Color del texto en el botón */
+            border-radius: 8px;
+            padding: 8px 16px;
+            border: none;
+        }
+
+        .dropdown-toggle:hover {
+            background-color: #f2f200; /* Cambiar el color al pasar el mouse */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -74,8 +121,10 @@
                 </ul>
             </div>
 
-            <!-- Reproductor Fluid -->
-            <div id="fluidPlayer" style="width: 100%; height: 500px;"></div>
+            <!-- Reproductor Fluid con aspecto 16:9 -->
+            <div class="video-player-wrapper">
+                <div id="fluidPlayer"></div>
+            </div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-kd5p+URdC59IshR5e4BQAYy+fmKLgMQ3rnZzBRROFbAUMzxh7Q7E5lZTFOgJKYYu" crossorigin="anonymous"></script>
