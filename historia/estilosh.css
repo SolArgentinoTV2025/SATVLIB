@@ -86,7 +86,7 @@ h2 {
   align-items: center;
 }
 
-ul.ganadores {border: 0.2em solid #ff0;border-radius: 0.3em;}
+ul.ganadores {border-radius: 0.3em;background: var(--gold-gradient);}
 
 img {
     width: 16px;
@@ -142,17 +142,13 @@ img.escudoan {
     top: 0.15em;
 }
 
-li {
-    background: var(--gold-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+li.equipo {
     font-size: 1.5em;
     font-weight: 700;
     text-align: justify;
 }
 
 .equipo {
-    border: 0.1em solid #ff0;
     margin-left: -1.7em;
     padding-right: 0.2em;
 }
@@ -401,8 +397,18 @@ img .escudo {
 .equipocolo,
 .equipoatleticnacional,
 .equipovasco {
-    border-bottom: 0.1em solid #ff0;
+    border-bottom: 5px solid #000;
+    color: #000;
+    margin-left: -1.2em;
+    margin-right: 0.5em;
 }
+
+li.equipobotafogo {
+    margin-left: -1.2em;
+    margin-right: 0.5em;
+}
+
+li.equipo.equipoboca {}
 
 .equipobotafogo {
     border-bottom: none;
@@ -410,15 +416,4 @@ img .escudo {
 
 .equipobotafogo {
     border-bottom: none;
-}
-
-ul.ganadores {
-    border-top-left-radius: 0.3em;
-    border-top-right-radius: 0.3em;
-    border-bottom-left-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
-    border-top: 0.3em solid #ff0;
-    border-bottom: 0.3em solid #ff0;
-    border-right: 0.3em solid #ff0;
-    border-left: 0.3em solid #ff0;
 }

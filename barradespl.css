@@ -1,0 +1,33 @@
+::-webkit-scrollbar {
+    width: 12px;  /* Ancho de la barra de desplazamiento */
+    height: 12px;  /* Altura de la barra de desplazamiento horizontal */
+  }
+  
+  /* Personalizar la pista de la barra de desplazamiento */
+  ::-webkit-scrollbar-track {
+    background: #000;  /* Fondo negro de la pista */
+    border-radius: 10px;  /* Bordes redondeados de la pista */
+  }
+  
+  /* Personalizar el "thumb" (el control deslizante de la barra de desplazamiento) */
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold-gradient);  /* Gradiente dorado */
+    border-radius: 10px;  /* Bordes redondeados del thumb */
+    border: 3px solid #000;  /* Borde alrededor del thumb (para que resalte sobre el fondo) */
+  }
+  
+  /* Para cuando el "thumb" es hover (al pasar el cursor sobre él) */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FFD700;  /* Dorado sólido cuando se pasa el cursor */
+  }
+  
+  /* Para personalizar la barra de desplazamiento horizontal */
+  ::-webkit-scrollbar-horizontal {
+    height: 12px;  /* Altura de la barra horizontal */
+  }
+  
+  /* Para personalizar la barra de desplazamiento en Firefox */
+  html {
+    scrollbar-width: thin;  /* Barra fina en Firefox */
+    scrollbar-color: var(--gold-gradient) #000;  /* Color del thumb y del fondo */
+  }
