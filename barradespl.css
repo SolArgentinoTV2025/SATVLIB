@@ -25,9 +25,3 @@
   ::-webkit-scrollbar-horizontal {
     height: 12px;  /* Altura de la barra horizontal */
   }
-  
-  /* Para personalizar la barra de desplazamiento en Firefox */
-  html {
-    scrollbar-width: thin;  /* Barra fina en Firefox */
-    scrollbar-color: var(--gold-gradient) #000;  /* Color del thumb y del fondo */
-  }
