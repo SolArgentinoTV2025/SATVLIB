@@ -1,0 +1,115 @@
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    margin-top: -31em;
+}
+
+.dropdown-btn {
+    color: #000;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+    border: 0.2em solid #000;
+    border-radius: 0.3em;
+    width: 10em;
+    text-align: center;
+    font-weight: 700;
+    background: var(--gold-gradient););)=;);
+}
+
+.dropdown-btn:hover {
+    background: #000; /* Mantiene el fondo negro */
+    : #fff; /* Asegura que el color base no desaparezca */
+}
+
+.dropdown-btn:hover span {
+background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */
+}
+
+.dropdown-btn:hover:after {
+background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */
+}
+
+.dropdown-btn::after {
+    content: " ▼";
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-btn.open::after {
+    transform: rotate(180deg); /* Gira la flecha */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--gold-gradient);
+    color: #000;
+    min-width: 10em;
+    z-index: 1;
+    box-shadow: 0px 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.3em;
+    height: 6.4em;
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+    top: 2.8em;
+}
+
+.show {
+    display: block; /* Muestra el contenido cuando se aplica esta clase */
+}
+
+.video-option {
+    padding: 0.75em 1em;
+    text-decoration: none;
+    display: block;
+    color: #000;
+    position: relative;
+    top: 0.5em;
+}
+
+.video-option:hover {
+    background: #000; /* Mantiene el fondo negro */
+    : #fff; /* Asegura que el color base no desaparezca */
+}
+
+.video-option:hover span {
+background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */
+}
+
+a.video-option:visited {
+    color: #000;
+}
+
+  /* Media Query */
+  @media (max-width: 40em) {
+    .dropdown-btn {
+      width: 8em;
+      padding: 0.4em 0.8em;
+      font-size: 0.9em;
+    }
+  
+    .dropdown-content {
+      min-width: 8em;
+    }
+  
+    .dropdown-btn::after {
+      font-size: 0.7em;
+    }
+  }
