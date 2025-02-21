@@ -93,7 +93,7 @@ background-clip: text;
 }
 
 .video-option:hover {
-    color: #ff0 !important;!im;!imo;!imor;!imo;!i;!;
+    color:#ff0;
     background-color: #000;
 }
 
@@ -125,7 +125,10 @@ fill: #ff0 !important;
 [data-balloon]:after {
 padding: 0.3em 0.7em;
 background: rgba(17, 17, 17, 0.7);
-color: #ff0 !important;
+background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */ !important;
 }
 
 .dplayer-controller .dplayer-bar-wrap .dplayer-bar-time {
@@ -135,7 +138,10 @@ top: -20px;
 border-radius: 4px;
 padding: 5px 7px;
 background-color: rgba(0, 0, 0, 0.62);
-color: #ff0 !important;
+background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */ !important;
 font-size: 12px;
 text-align: center;
 opacity: 1;
@@ -149,7 +155,10 @@ pointer-events: none;
 .dplayer-menu .dplayer-menu-item a {
 padding: 0 10px;
 line-height: 30px;
-color: #ff0 !important;
+background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */ !important;
 font-size: 13px;
 display: inline-block;
 vertical-align: middle;
@@ -167,7 +176,7 @@ display: block;
 left: 0;
 top: 0;
 border-radius: 15px;
-background: #ff0 !important;
+background: var(--gold-gradient)!important;
 transition: 0.2sease-in-out;
 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 height: 18px;
@@ -193,7 +202,10 @@ transition: 0.2sease-in-out;
 }
 
 .dplayer-controller .dplayer-icons .dplayer-label {
-color: #ff0 !important;
+background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */ !important;
 font-size: 13px;
 display: inline-block;
 vertical-align: middle;
@@ -202,7 +214,10 @@ white-space: nowrap;
 
 .dplayer-controller .dplayer-icons .dplayer-time, .dplayer-controller .dplayer-icons .dplayer-live-badge {
 line-height: 38px;
-color: #ff0 !important;
+background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */ !important;
 text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 vertical-align: middle;
 font-size: 13px;
