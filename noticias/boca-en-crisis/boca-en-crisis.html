@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://libertadores.solargentinotv.com.ar/noticias/boca-en-crisis/estilosb.css">
     <link rel="stylesheet" href="https://libertadores.solargentinotv.com.ar/barradespl.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ6H4sR39wo5ptbV0fF7K+Ybyw6+P7r+YBYcXzsm5i6jlAJ7ykac8PklYy5tS" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/fluid-player@latest/dist/fluidplayer.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fluid-player@latest/dist/fluidplayer.min.css">
     <title>Boca Juniors en crisis: ¿Posible caída en la Copa Libertadores?</title>
@@ -58,16 +59,26 @@
             La caída de Boca Juniors en la Copa Libertadores 2025 podría significar un golpe letal para su confianza y su futuro en la competencia internacional. El club sabe que la historia reciente está marcada por sus grandes victorias en este torneo, pero si no logra revertir la situación, las preguntas sobre su verdadera capacidad competitiva comenzarán a intensificarse. A pesar de la importancia de este resultado, el fútbol siempre deja espacio para la remontada, y Boca aún tiene una oportunidad para demostrar su fortaleza en el partido de vuelta. Sin embargo, el tiempo apremia, y el margen de error se reduce cada vez más.
         </p>
 
-        <!-- Menú desplegable para elegir el medio de reproducción -->
+        <!-- Menú Dropdown para elegir el medio de reproducción -->
         <div class="video-player">
             <h3>Ver resumen del partido</h3>
-            <select id="videoSource" onchange="changeVideoSource()">
-                <option value="https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4">Ver en ESPN</option>
-                <option value="https://libertadores.solargentinotv.com.ar/ALI-BOC-TELEFE.mp4">Ver en TELEFE</option>
-            </select>
+            
+            <!-- Dropdown con Bootstrap -->
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Selecciona el medio
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#" onclick="changeVideoSource('https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4')">Ver en ESPN</a></li>
+                    <li><a class="dropdown-item" href="#" onclick="changeVideoSource('https://libertadores.solargentinotv.com.ar/ALI-BOC-TELEFE.mp4')">Ver en TELEFE</a></li>
+                </ul>
+            </div>
 
+            <!-- Reproductor Fluid -->
             <div id="fluidPlayer" style="width: 100%; height: 500px;"></div>
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-kd5p+URdC59IshR5e4BQAYy+fmKLgMQ3rnZzBRROFbAUMzxh7Q7E5lZTFOgJKYYu" crossorigin="anonymous"></script>
 
         <script>
             // Inicializar Fluid Player
@@ -78,9 +89,8 @@
             });
 
             // Cambiar la fuente del video según la opción seleccionada
-            function changeVideoSource() {
-                const videoSource = document.getElementById('videoSource').value;
-                player.setSrc(videoSource);
+            function changeVideoSource(source) {
+                player.setSrc(source);
             }
         </script>
     </div>
