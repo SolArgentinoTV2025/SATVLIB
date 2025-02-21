@@ -318,47 +318,47 @@ font-weight: 600;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #333;
-  font-size: 1em;
-}
-
-.navbar li {
-  padding: 0.625em 1.25em; /* 10px 20px en em */
-}
-
-.navbar a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  transition: opacity 0.3s ease;
-}
-
-.navbar a:hover {
-  opacity: 0.8;
-}
-
-/* Responsive: cambia a menú vertical en pantallas pequeñas */
-@media (max-width: 48em) {
-  .navbar {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    font-size: 1em;
   }
-
+  
   .navbar li {
-    padding: 0.5em;
+    padding: 0.625em 1.25em; /* 10px 20px en em */
   }
-}
+  
+  .navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    transition: opacity 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    opacity: 0.8;
+  }
+  
+  /* Responsive: cambia a menú vertical en pantallas pequeñas */
+  @media (max-width: 48em) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar li {
+      padding: 0.5em;
+    }
+  }
 
 .logocanal {
   width: 1.2em;
