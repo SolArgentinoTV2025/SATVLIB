@@ -15,7 +15,7 @@ body {
   font-size: 1rem; /* Base en em */
 }
 
-.aviso {position: absolute;top: -6.5em;font-weight: 700;font-size: 2.4em;display: flex;margin-top: 10em;}
+.aviso {position: relative;top: -10.5em;font-weight: 700;font-size: 2.4em;display: flex;margin-top: 11em;padding-left: 4em;padding-right: 4em;margin-bottom: -11em;}
 
 /* Colores */
 :root {
@@ -86,7 +86,7 @@ h2.ganadoresp {
   background: var(--gold-gradient);
   border-radius: 1em;
   box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.1);
-  width: 60%;
+  width: 54%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -94,7 +94,7 @@ h2.ganadoresp {
   color: #000;
 }
 
-.bloque-titulo {margin-top: -34em;position: relative;padding-top: 29em;}
+.bloque-titulo {margin-top: -30em;position: relative;padding-top: 23em;height: 0em;}
 
 .bloque-titulo p {
     margin-bottom: 0em;
@@ -183,11 +183,11 @@ p {
 
 .fixture p {
     font-size: 1.2em;
-    padding-left: 8em;
-    padding-right: 8em;
+    padding-left: 3em;
+    padding-right: 3.2em;
     margin-top: 10em;
-    margin-bottom: -2em;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
+    padding-bottom: -1em;
 }
 
 /* Partidos */
