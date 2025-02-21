@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="https://libertadores.solargentinotv.com.ar/barradespl.css">
     <title>Boca Juniors en crisis: ¿Posible caída en la Copa Libertadores?</title>
 
-    <!-- FluidPlayer CSS -->
-    <link rel="stylesheet" href="https://cdn.fluidplayer.com/1.0.2/css/fluidplayer.min.css">
+    <!-- DPlayer CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
 
     <style>
         .video-container {
@@ -47,16 +47,6 @@
             El fútbol sudamericano ha sido testigo de una de las sorpresas más significativas de la Copa Libertadores 2025...
         </p>
 
-        <!-- Video Player with Dropdown Menu -->
-        <div class="video-container">
-            <div id="fluid-player"></div>
-
-            <select class="video-select" id="video-select">
-                <option value="https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4">Ver en ESPN</option>
-                <option value="https://libertadores.solargentinotv.com.ar/ALI-BOC-TELEFE.mp4">Ver en TELEFE</option>
-            </select>
-        </div>
-
         <div class="bloque-titulo">
             <h2>Las críticas a la actuación de Boca</h2>
         </div>
@@ -84,22 +74,38 @@
         <p>
             La caída de Boca Juniors en la Copa Libertadores 2025 podría significar un golpe letal para su confianza...
         </p>
+
+        <!-- Video Player with Dropdown Menu (at the end of the article, inside the content) -->
+        <div class="video-container">
+            <div id="dplayer"></div>
+
+            <select class="video-select" id="video-select">
+                <option value="https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4">Ver en ESPN</option>
+                <option value="https://libertadores.solargentinotv.com.ar/ALI-BOC-TELEFE.mp4">Ver en TELEFE</option>
+            </select>
+        </div>
     </div>
 
-    <!-- FluidPlayer JS -->
-    <script src="https://cdn.fluidplayer.com/1.0.2/js/fluidplayer.min.js"></script>
+    <!-- DPlayer JS -->
+    <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
     <script>
-        var player = fluidPlayer(
-            "fluid-player", 
-            {
-                "video": "https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4",
-                "theme": "#FFFF00"
-            }
-        );
+        // Initialize DPlayer with the default video (ESPN)
+        var dp = new DPlayer({
+            element: document.getElementById('dplayer'),
+            video: {
+                url: 'https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4',
+                type: 'mp4'
+            },
+            theme: '#FFFF00' // Yellow theme
+        });
 
+        // Change the video source based on the dropdown selection
         document.getElementById("video-select").addEventListener("change", function() {
             var selectedVideo = this.value;
-            player.load(selectedVideo);
+            dp.switchVideo({
+                url: selectedVideo,
+                type: 'mp4'
+            });
         });
     </script>
 </body>
