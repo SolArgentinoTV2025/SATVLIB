@@ -1,0 +1,181 @@
+@import url('./fuentes/conmebol.css');
+
+/* Estilos Generales */
+body {
+  font-family: 'Conmebol', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000; /* Fondo negro */
+  color: #FFD700; /* Color dorado para el texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1rem; /* Base en em */
+}
+
+.aviso {
+  position: absolute;
+  top: 5em;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Definir gradiente dorado para los textos */
+:root {
+  --gold-gradient: linear-gradient(45deg, #FFD700, #F8C971, #F1B24D); /* Gradiente dorado */
+  --black: #000000; /* Color negro */
+  --white: #FFFFFF; /* Color blanco */
+  --gray: #888888; /* Gris para textos secundarios */
+}
+
+/* Estilo para los títulos de cada bloque de contenido */
+.bloque-titulo {
+  font-size: 2.2em;
+  text-align: center;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  margin-top: 3em;
+  white-space: nowrap;
+  margin-bottom: -2em;
+  font-weight: 700;
+}
+
+h1 {
+  top: 1em;
+}
+
+h2 {
+  top: 3em;
+}
+
+/* Contenedor principal de la historia */
+#fixture {
+  margin: 5em 0 2em 0; /* Dejar espacio para los títulos */
+  padding: 1em;
+  background-color: #000000;
+  border-radius: 1em;
+  box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 75em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  color: #FFD700;
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 1.5em 0;
+  font-weight: 400;
+}
+
+/* Navegación */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #333;
+  font-size: 1em;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.navbar li {
+  padding: 0.625em 1.25em;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  transition: opacity 0.3s ease;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+/* Responsividad */
+@media (max-width: 48em) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .bloque-titulo {
+    font-size: 1.8em;
+  }
+
+  #fixture {
+    width: 90%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar li {
+    padding: 0.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 36em) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  header {
+    padding: 1.2em 1.5em;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .navbar li {
+    padding: 0.5em;
+  }
+
+  .navbar a {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}
+
+.logocanal {
+  width: 1.2em;
+  margin-bottom: -0.1em;
+  margin-left: 0.5em;
+}
