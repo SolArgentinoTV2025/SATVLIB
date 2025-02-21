@@ -13,15 +13,6 @@
   ],
   "rewrites": [
     {
-      "source": "/:folder",
-      "destination": "/:folder/:folder.html"
-    }
-  ]
-}
-
-{
-  "rewrites": [
-    {
       "source": "/:path*",
       "destination": "/:path*.html"
     }
