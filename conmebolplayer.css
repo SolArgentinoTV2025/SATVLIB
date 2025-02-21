@@ -20,92 +20,101 @@ border-radius: 0.3em;
     position: relative;
     display: inline-block;
     font-weight: 700;
-}
-
-.dropdown-btn {
+  }
+  
+  .dropdown-btn {
     background-color: #FFFF00;
     color: black;
     padding: 0.5em 1em;
-    font-size: 1rem;
+    font-size: 1em;
     cursor: pointer;
     border: 0.2em solid #000;
     border-radius: 0.3em;
     margin-top: -31em;
     width: 10em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Estilo cuando el botón se pasa por encima */
-.dropdown-btn:hover {
+  }
+  
+  .dropdown-btn:hover {
     background-color: #000;
     color: #FFFF00;
-}
-
-/* Flecha generada con content */
-.dropdown-btn::after {
-    content: "▼";
-    margin-left: 0.5em;
+  }
+  
+  .dropdown-btn::after {
+    content: " ▼";
+    font-size: 0.8em;
     transition: transform 0.3s ease;
-}
-
-/* Contenido del Menú */
-.dropdown-content {
+  }
+  
+  .dropdown-btn.open::after {
+    transform: rotate(180deg); /* Gira la flecha */
+  }
+  
+  .dropdown-content {
     display: none;
     position: absolute;
     background-color: #ff0;
     color: #000;
-    min-width: 160%;
+    min-width: 10em;
     z-index: 1;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0.5em 1em rgba(0, 0, 0, 0.2);
     border-radius: 0.3em;
     height: 6.4em;
-}
-
-#video-dropdown:hover {
+  }
+  
+  #video-dropdown:hover {
     color: #ff0;
-}
-
-#video-dropdown {
+  }
+  
+  #video-dropdown {
     color: #ff0;
-}
-
-#video.dropdown:hover {
+  }
+  
+  #video.dropdown:hover {
     background-color: #000;
     color: #ff0;
-}
-
-/* Estilo de las opciones del menú */
-.dropdown-content .video-option {
+  }
+  
+  .dropdown-content .video-option {
     border-radius: 0;
-    padding: 1em 1.5em;
+    padding: 0.75em 1em;
+    top: 0.5em;
     position: relative;
     text-decoration: none;
     display: block;
-    height: 2.5em;
-}
-
-a.video-option:hover {
+    height: 1.2em;
+  }
+  
+  a.video-option:hover {
     color: #ff0;
     background: #000;
-}
-
-a.video-option:visited {
+  }
+  
+  a.video-option:visited {
     color: #ff0;
-}
-
-.dropdown-content:hover {
-}
-
-.show {
+  }
+  
+  .dropdown-content:hover {}
+  
+  .show {
     display: block;
-}
-
-/* Flecha que rota al abrir el menú */
-.dropdown-btn.open::after {
-    transform: rotate(180deg);
-}
+  }
+  
+  /* Media Query */
+  @media (max-width: 40em) {
+    .dropdown-btn {
+      width: 8em;
+      padding: 0.4em 0.8em;
+      font-size: 0.9em;
+    }
+  
+    .dropdown-content {
+      min-width: 8em;
+    }
+  
+    .dropdown-btn::after {
+      font-size: 0.7em;
+    }
+  }  
 
 .dplayer svg path, .dplayer svg circle {
 fill: #ff0 !important;
