@@ -293,3 +293,13 @@ font-weight: 600;
   margin-bottom: -0.1em;
   margin-left: 0.5em;
 }
+
+.img {
+    width: 20px; /* La imagen ocupará el 100% del contenedor */
+    max-width: 50px; /* Tamaño máximo */
+    aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto 16:9 */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro de las dimensiones sin distorsionarse */
+    position: absolute;
+    left: 35em; /* O lo que necesites para posicionar */
+    margin-top: 0.1em;
+}
