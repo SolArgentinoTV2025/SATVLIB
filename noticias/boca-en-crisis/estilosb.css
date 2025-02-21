@@ -1,4 +1,4 @@
-@import url('.../fuentes/conmebol.css');
+@import url('https://libertadores.solargentinotv.com.ar/fuentes/conmebol.css');
 
 /* Estilos Generales */
 body {
@@ -15,7 +15,7 @@ body {
   font-size: 1rem; /* Base en em */
 }
 
-.aviso {position: absolute;top: 3em;font-weight: 700;font-size: 2.4em;display: contents;}
+.aviso {position: absolute;top: -6.5em;font-weight: 700;font-size: 2.4em;display: flex;margin-top: 10em;}
 
 /* Colores */
 :root {
@@ -83,12 +83,10 @@ h2.ganadoresp {
 /* Contenedor principal de los partidos */
 .fixture {
   margin: 5em 0 2em 0; /* Dejar espacio para los títulos */
-  padding: 1em;
   background: var(--gold-gradient);
   border-radius: 1em;
   box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 75em;
+  width: 60%;
   text-align: center;
   display: flex;
   flex-direction: column;
