@@ -63,7 +63,7 @@ h1 {
   top: 1em;
 }
 
-h2 {
+.fixture h2 {
   background: var(--gold-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -71,8 +71,20 @@ h2 {
   top: 1.3em;
 }
 
+.ganadoresp {
+    left: 5em;
+}
+
+h2.ganadoresp {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 0.5em;
+}
+
 /* Contenedor principal de los partidos */
-#fixture {
+.fixture {
   margin: 5em 0 2em 0; /* Dejar espacio para los títulos */
   padding: 1em;
   background-color: #000000;
