@@ -138,7 +138,7 @@ font-weight: 600;
   font-size: 1.2em;
   color: #000000;
   text-overflow: ellipsis;
-  margin: 0 6em;
+  margin: 0 5.6em;
   font-weight: 700;
   text-align: center;
 }
@@ -234,9 +234,9 @@ font-weight: 600;
 .penales {
     color: #000;
     font-weight: 600;
-    margin-left: -5em;
+    margin-left: -4em;
     position: absolute;
-    top: 2.5em;
+    top: 2.6em;
 }
 
 .navbar {
