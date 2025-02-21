@@ -106,6 +106,7 @@ a.leer-mas {
 a.leer-mas {
     display: inline-block;
     background-color: var(--gold-gradient); /* Fondo negro */
+    color: #000; /* Texto blanco por defecto */
     border: 0.2em solid #000;
     padding: 0.4em 1em;
     border-radius: 0.3em;
@@ -118,6 +119,7 @@ a.leer-mas {
 
 a.leer-mas:hover {
     background-color: #000; /* Mantiene el fondo negro */
+    : #fff; /* Asegura que el color base no desaparezca */
 }
 
 a.leer-mas:hover span {
