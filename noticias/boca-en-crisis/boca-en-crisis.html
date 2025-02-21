@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://libertadores.solargentinotv.com.ar/noticias/boca-en-crisis/estilosb.css">
     <link rel="stylesheet" href="https://libertadores.solargentinotv.com.ar/barradespl.css">
-    <script src="https://cdn.jsdelivr.net/npm/dplayer@latest/dist/DPlayer.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@latest/dist/DPlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fluid-player@latest/dist/fluidplayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fluid-player@latest/dist/fluidplayer.min.css">
     <title>Boca Juniors en crisis: ¿Posible caída en la Copa Libertadores?</title>
 </head>
 <body>
@@ -66,29 +66,23 @@
                 <option value="https://libertadores.solargentinotv.com.ar/ALI-BOC-TELEFE.mp4">Ver en TELEFE</option>
             </select>
 
-            <div id="dplayer"></div>
+            <div id="fluidPlayer" style="width: 100%; height: 500px;"></div>
         </div>
 
         <script>
-            // Inicializar el reproductor DPlayer
-            let player = new DPlayer({
-                container: document.getElementById('dplayer'),
-                video: {
-                    url: 'https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4',
-                    pic: 'https://libertadores.solargentinotv.com.ar/thumbnail.jpg',
-                },
-                theme: '#FFFF00', // Tema amarillo
+            // Inicializar Fluid Player
+            let player = fluidPlayer({
+                elementId: 'fluidPlayer',
+                videoSrc: 'https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4',
+                themeColor: '#FFFF00', // Tema amarillo
             });
 
             // Cambiar la fuente del video según la opción seleccionada
             function changeVideoSource() {
                 const videoSource = document.getElementById('videoSource').value;
-                player.switchVideo({
-                    url: videoSource,
-                });
+                player.setSrc(videoSource);
             }
         </script>
-
     </div>
 </body>
 </html>
