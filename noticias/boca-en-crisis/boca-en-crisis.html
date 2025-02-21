@@ -27,19 +27,51 @@
     border-radius: 0.3em;
 }
         
-        .video-select {
-            margin-top: -31em;
-            background-color: #FFFF00;
-            padding: 8px 16px;
-            font-size: 16px;
-            cursor: pointer;
-            border: 0.2em solid #000;
-            border-radius: 0.3em;
-        }
+/* Estilo del Menú Desplegable */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
-        .video-select:hover {
-            background: #000;
-        }
+.dropdown-btn {
+    background-color: #FFFF00;
+    color: black;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0.2em solid #000;
+    border-radius: 0.3em;
+}
+
+.dropdown-btn:hover {
+    background-color: #000;
+    color: #FFFF00;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown-content .video-option {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+.dropdown-content .video-option:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
         
         .dplayer svg path, .dplayer svg circle {
     fill: #ff0 !important;
@@ -184,38 +216,49 @@
             La caída de Boca Juniors en la Copa Libertadores 2025 podría significar un golpe letal para su confianza...
         </p>
 
-        <!-- Video Player with Dropdown Menu (at the end of the article, inside the content) -->
         <div class="video-container">
             <div id="dplayer"></div>
-
-            <select class="video-select" id="video-select">
-                <option value="https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4">Ver en ESPN</option>
-                <option value="https://libertadores.solargentinotv.com.ar/ALI-BOC-TELEFE.mp4">Ver en TELEFE</option>
-            </select>
+        
+            <!-- Menú Desplegable -->
+            <div class="dropdown">
+                <button class="dropdown-btn" id="video-btn">Ver en ESPN</button>
+                <div class="dropdown-content" id="video-dropdown">
+                    <a href="#" class="video-option" data-video="https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4">Ver en ESPN</a>
+                    <a href="#" class="video-option" data-video="https://libertadores.solargentinotv.com.ar/ALI-BOC-TELEFE.mp4">Ver en TELEFE</a>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <!-- DPlayer JS -->
-    <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
-    <script>
-        // Initialize DPlayer with the default video (ESPN)
-        var dp = new DPlayer({
-            element: document.getElementById('dplayer'),
-            video: {
-                url: 'https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4',
-                type: 'mp4'
-            },
-            theme: '#FFFF00' // Yellow theme
-        });
-
-        // Change the video source based on the dropdown selection
-        document.getElementById("video-select").addEventListener("change", function() {
-            var selectedVideo = this.value;
-            dp.switchVideo({
-                url: selectedVideo,
-                type: 'mp4'
+        
+        <!-- DPlayer JS -->
+        <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
+        <script>
+            // Inicializar DPlayer con el video predeterminado (ESPN)
+            var dp = new DPlayer({
+                element: document.getElementById('dplayer'),
+                video: {
+                    url: 'https://libertadores.solargentinotv.com.ar/ALI-BOC-ESPN.mp4',
+                    type: 'mp4'
+                },
+                theme: '#FFFF00' // Tema amarillo
             });
-        });
-    </script>
+        
+            // Mostrar u ocultar el menú desplegable
+            document.getElementById('video-btn').addEventListener('click', function() {
+                document.getElementById('video-dropdown').classList.toggle('show');
+            });
+        
+            // Cambiar la fuente del video cuando se selecciona una opción
+            document.querySelectorAll('.video-option').forEach(function(option) {
+                option.addEventListener('click', function() {
+                    var selectedVideo = this.getAttribute('data-video');
+                    dp.switchVideo({
+                        url: selectedVideo,
+                        type: 'mp4'
+                    });
+                    document.getElementById('video-btn').textContent = this.textContent; // Actualizar texto del botón
+                    document.getElementById('video-dropdown').classList.remove('show'); // Ocultar el menú
+                });
+            });
+        </script>        
 </body>
 </html>
