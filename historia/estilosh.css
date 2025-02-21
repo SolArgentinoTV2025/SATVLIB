@@ -86,6 +86,23 @@ h2 {
   align-items: center;
 }
 
+img {
+    width: 16px;
+    height: auto;
+    position: relative;
+    margin-left: -0.2em;
+    top: 0.1em;
+}
+
+li {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: justify;
+}
+
 .tipopartido {
   font-weight: 400;
   position: absolute;
@@ -295,11 +312,9 @@ font-weight: 600;
 }
 
 .img {
-    width: 20px; /* La imagen ocupará el 100% del contenedor */
-    max-width: 50px; /* Tamaño máximo */
-    aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto 16:9 */
-    object-fit: contain; /* Asegura que la imagen se ajuste dentro de las dimensiones sin distorsionarse */
+    width: 10px; /* Unidades relativas al ancho de la ventana */
+    height: 10px; /* Mantiene la relación de aspecto */
     position: absolute;
-    left: 35em; /* O lo que necesites para posicionar */
+    left: 35%; /* Asegura que el elemento se mueva de acuerdo al ancho de la pantalla */
     margin-top: 0.1em;
 }
