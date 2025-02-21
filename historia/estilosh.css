@@ -374,12 +374,33 @@ img .escudo {
     margin-top: 0.1em;
 }
 
-li.equipoindependiente, li.equipoboca, li.equipopeñarol, li.equiporiver, li.equipoestudiantes, 
-li.equiposaopaulo, li.equiposantos, li.equipoflamengo, li.equipopalmeiras, li.equipoolimpia,
-li.equipoatleticonacional, li.equipogremio, li.equiponacional, li.equipocruzeiro, 
-li.equipointernacional, li.equipooncecaldas, li.equipoldiquito, li.equipovelezsarsfield, 
-li.equipocolocolo, li.equipovascomag, li.equiporacing, li.equipoargentinosjuniors,
-li.equisantos, li.equipoadvanced, li.equipofluiminense, li.equipocolo, li.equipoatleticnacional, li.equipovasco{
+.equipoindependiente,
+.equipoboca,
+.equipopeñarol,
+.equiporiver,
+.equipoestudiantes,
+.equiposaopaulo,
+.equiposantos,
+.equipoflamengo,
+.equipopalmeiras,
+.equipoolimpia,
+.equipoatleticonacional,
+.equipogremio,
+.equiponacional,
+.equipocruzeiro,
+.equipointernacional,
+.equipooncecaldas,
+.equipoldiquito,
+.equipovelezsarsfield,
+.equipocolocolo,
+.equiporacing,
+.equipoargentinosjuniors,
+.equisantos,
+.equipoadvanced,
+.equipofluiminense,
+.equipocolo,
+.equipoatleticnacional,
+.equipovasco {
     border-bottom: 0.1em solid #ff0;
 }
 
