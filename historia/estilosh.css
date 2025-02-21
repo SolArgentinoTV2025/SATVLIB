@@ -86,21 +86,68 @@ h2 {
   align-items: center;
 }
 
+ul.ganadores {border: 0.2em solid #ff0;border-radius: 0.3em;}
+
 img {
     width: 16px;
     height: auto;
     position: relative;
-    margin-left: -0.2em;
+    margin-left: 0.8em;
     top: 0.1em;
+}
+
+img.escudoolimpia {
+    width: 18px;
+    height: auto;
+    position: relative;
+    margin-left: 0.8em;
+    top: 0.08em;
+}
+
+img.escudosantos {
+    width: 18px;
+    height: auto;
+    position: relative;
+    margin-left: 0.8em;
+    top: 0.03em;
+}
+
+img.escudospi {
+    width: 18px;
+    height: auto;
+    position: relative;
+    margin-left: 0.8em;
+    top: 0.1em;
+}
+
+img.escudoaaj {
+    width: 18px;
+    height: auto;
+    position: relative;
+    margin-left: 0.8em;
+    top: 0.06em;
+}
+
+img.escudoan {
+    width: 16px;
+    height: auto;
+    position: relative;
+    margin-left: 0.8em;
+    top: 0.15em;
 }
 
 li {
     background: var(--gold-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 700;
     text-align: justify;
+}
+
+.equipo {
+    border: 0.1em solid #ff0;
+    margin-left: -1.7em;
 }
 
 .tipopartido {
@@ -117,6 +164,7 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: justify;
+  font-weight: 600;
 }
 
 /* Partidos */
