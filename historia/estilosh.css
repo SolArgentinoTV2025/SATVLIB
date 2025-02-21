@@ -373,3 +373,16 @@ img .escudo {
     left: 35%; /* Asegura que el elemento se mueva de acuerdo al ancho de la pantalla */
     margin-top: 0.1em;
 }
+
+.equipoindependiente, .equipoboca, .equipopeñarol, .equiporiver, .equipoestudiantes, 
+.equiposaopaulo, .equiposantos, .equipoflamengo, .equipopalmeiras, .equipoolimpia,
+.equipoatleticonacional, .equipogremio, .equiponacional, .equipocruzeiro, 
+.equipointernacional, .equipooncecaldas, .equipoldiquito, .equipovelezsarsfield, 
+.equipocolocolo, .equipovascomag, .equiporacing, .equipoargentinosjuniors, 
+.equipofluuminense {
+    border-bottom: 0.1em solid #ff0;
+}
+
+.equipobotafogo {
+    border-bottom: none;
+}
