@@ -93,8 +93,15 @@ background-clip: text;
 }
 
 .video-option:hover {
-    color: #ff0 !important;!im;!imo;!imor;!imo;!i;!;
-    background-color: #000;
+    background: #000; /* Mantiene el fondo negro */
+    : #fff; /* Asegura que el color base no desaparezca */
+}
+
+.video-option:hover span {
+background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */
 }
 
 a.video-option:visited {
