@@ -47,6 +47,7 @@ background-clip: text;
 .dropdown-btn::after {
     content: " ▼";
     font-size: 0.8em;
+    margin-left: 4em;
     transition: transform 0.3s ease;
 }
 

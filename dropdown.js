@@ -1,8 +1,7 @@
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const dropdownBtn = document.querySelector(".dropdown-btn");
     
     dropdownBtn.addEventListener("click", function() {
-      // Solo girar la flecha sin abrir el dropdown
-      dropdownBtn.classList.toggle("open");
+      dropdownBtn.classList.toggle("open"); // Añade o elimina la clase 'open' para girar la flecha
     });
-  });
+  });  
