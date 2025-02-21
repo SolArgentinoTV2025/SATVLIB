@@ -92,9 +92,14 @@ h2.ganadoresp {
   flex-direction: column;
   align-items: center;
   color: #000;
+  height: 100vw;
 }
 
 .bloque-titulo {margin-top: -30em;position: relative;padding-top: 23em;height: 0em;}
+
+.bloque-resumen {
+    margin-top: -66em;
+}
 
 .bloque-titulo p {
     margin-bottom: 0em;
