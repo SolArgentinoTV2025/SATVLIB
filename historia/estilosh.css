@@ -407,3 +407,18 @@ img .escudo {
 .equipobotafogo {
     border-bottom: none;
 }
+
+.equipobotafogo {
+    border-bottom: none;
+}
+
+ul.ganadores {
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    border-top: 0.3em solid #ff0;
+    border-bottom: 0.3em solid #ff0;
+    border-right: 0.3em solid #ff0;
+    border-left: 0.3em solid #ff0;
+}
