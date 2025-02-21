@@ -85,12 +85,15 @@ border-radius: 0.3em;
   }
   
   a.video-option:hover {
-    color: #ff0;
+    color: #ff0 !important;!impor;!impora;!i;!;
     background: #000;
   }
   
   a.video-option:visited {
-    color: #ff0;
+   /* Hereda el color del elemento padre */
+   /* O cualquier otro estilo que prefieras */
+   all: unset;
+   color: #000;
   }
   
   .dropdown-content:hover {}
