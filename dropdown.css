@@ -24,11 +24,23 @@
     text-align: center;
     font-weight: 700;
     background: var(--gold-gradient);
+    position: relative; /* Aseguramos que el pseudo-elemento se ubique bien */
+}
+
+.dropdown-btn .arrow {
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-btn.open .arrow {
+    transform: rotate(180deg); /* Gira la flecha */
 }
 
 .dropdown-btn:hover {
     background: #000; /* Mantiene el fondo negro */
 }
+
 
 .dropdown-btn:hover span {
     background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
