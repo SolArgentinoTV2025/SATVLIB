@@ -99,3 +99,17 @@ font-size: 13px;
 cursor: default;
 font-weight: 700;
 }
+
+.dplayer-controller .dplayer-icons .dplayer-toggle input:checked + label:before {
+    width: 30px;
+    background: #ffff00bb !important;
+}
+
+.dplayer-controller .dplayer-icons .dplayer-toggle input:checked+label:before {
+    width: 30px;
+    background: #ffff00bb !important;
+}
+.dplayer-controller .dplayer-icons .dplayer-toggle input:checked + label:before {
+    width: 30px;
+    background: #ffff00bb !important;
+}
