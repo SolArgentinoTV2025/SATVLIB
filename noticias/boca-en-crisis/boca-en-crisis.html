@@ -81,40 +81,6 @@
         
         <!-- DPlayer JS -->
         <script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script>
-        <script>
-            // Inicializar DPlayer con el video predeterminado (ESPN)
-            var dp = new DPlayer({
-                element: document.getElementById('dplayer'),
-                video: {
-                    url: 'https://libertadores.solargentinotv.com.ar/ALI-BOC-TELEFE.mp4',
-                    type: 'mp4'
-                },
-                theme: '#FFFF00' // Tema amarillo
-            });
-        
-            const videoBtn = document.getElementById('video-btn');
-
-if (videoBtn && videoBtn.querySelector('span')) {
-    videoBtn.addEventListener('click', function() {
-        document.getElementById('video-dropdown').classList.toggle('show');
-    });
-} else {
-    console.error('El botón no tiene un span dentro');
-}
-        
-            // Cambiar la fuente del video cuando se selecciona una opción
-            document.querySelectorAll('.video-option').forEach(function(option) {
-                option.addEventListener('click', function() {
-                    var selectedVideo = this.getAttribute('data-video');
-                    dp.switchVideo({
-                        url: selectedVideo,
-                        type: 'mp4'
-                    });
-                    document.getElementById('video-btn').textContent = this.textContent; // Actualizar texto del botón
-                    document.getElementById('video-dropdown').classList.remove('show'); // Ocultar el menú
-                });
-            });
-        </script>
         <script src="https://libertadores.solargentinotv.com.ar/dropdown.js"></script>
 </body>
 </html>
