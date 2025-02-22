@@ -20,7 +20,7 @@
     cursor: pointer;
     border: 0.2em solid #000;
     border-radius: 0.3em;
-    width: 10em;
+    width: 10.3em;
     text-align: center;
     font-weight: 700;
     background: var(--gold-gradient););)=;);
@@ -68,6 +68,8 @@ background-clip: text;
     height: 6.4em;
     overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
     top: 2.8em;
+    border: 0.2em solid;
+    margin-left: -0.1em;
 }
 
 .show {
