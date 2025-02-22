@@ -23,19 +23,18 @@
     width: 10.3em;
     text-align: center;
     font-weight: 700;
-    background: var(--gold-gradient););)=;);
+    background: var(--gold-gradient);
 }
 
 .dropdown-btn:hover {
     background: #000; /* Mantiene el fondo negro */
-    : #fff; /* Asegura que el color base no desaparezca */
 }
 
 .dropdown-btn:hover span {
-background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */
+    background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */
 }
 
 .dropdown-btn:hover:after {
