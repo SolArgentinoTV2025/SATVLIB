@@ -23,12 +23,13 @@
     width: 10.3em;
     text-align: center;
     font-weight: 700;
+    font-family: 'Conmebol';
     background: var(--gold-gradient);
     position: relative; /* Aseguramos que el pseudo-elemento se ubique bien */
 }
 
 .dropdown-btn .arrow {
-    margin-left: 0.5em;
+    margin-left: 4.5em;
     font-size: 0.8em;
     transition: transform 0.3s ease;
 }
