@@ -48,11 +48,3 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('video-dropdown').classList.remove('show');
         });
     });
-
-    const videoBtn = document.getElementById('video-btn');
-const videoDropdown = document.getElementById('video-dropdown');
-
-videoBtn.addEventListener('click', function() {
-    videoDropdown.classList.toggle('show');
-    videoBtn.classList.toggle('open'); // Agrega o quita la clase 'open' para rotar la flecha
-});
