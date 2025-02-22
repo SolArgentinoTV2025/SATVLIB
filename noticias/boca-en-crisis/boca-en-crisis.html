@@ -92,10 +92,15 @@
                 theme: '#FFFF00' // Tema amarillo
             });
         
-            // Mostrar u ocultar el menú desplegable
-            document.getElementByClass('dropdown-btn').addEventListener('click', function() {
-                document.getElementById('video-dropdown').classList.toggle('show');
-            });
+            const videoBtn = document.getElementById('video-btn');
+
+if (videoBtn && videoBtn.querySelector('span')) {
+    videoBtn.addEventListener('click', function() {
+        document.getElementById('video-dropdown').classList.toggle('show');
+    });
+} else {
+    console.error('El botón no tiene un span dentro');
+}
         
             // Cambiar la fuente del video cuando se selecciona una opción
             document.querySelectorAll('.video-option').forEach(function(option) {
