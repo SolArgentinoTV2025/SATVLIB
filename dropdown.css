@@ -56,17 +56,6 @@ background-clip: text;
 -webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */
 }
 
-.dropdown-btn::after {
-    content: " ▼";
-    font-size: 0.8em;
-    margin-left: 4em;
-    transition: transform 0.3s ease;
-}
-
-.dropdown-btn.open::after {
-    transform: rotate(180deg); /* Gira la flecha */
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
