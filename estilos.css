@@ -15,6 +15,31 @@ body {
   font-size: 1rem; /* Base en em */
 }
 
+.botoni {
+    all: unset;
+}
+
+.botoni:hover {
+    cursor: pointer;
+    filter: brightness(115%);
+}
+
+.botonv {
+    all: unset;
+}
+
+.botonv:hover {
+    cursor: pointer;
+    filter: brightness(115%);
+}
+
+        .repro {
+            display: none;
+            background: var(--gold-gradient);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
 .aviso {
 position: absolute;
 top: 5em;
