@@ -114,17 +114,15 @@
       <div class="fecha">FINAL - 18/02</div>
       <div class="tipopartido">IDA</div>
     </div>
-    <div class="partido">
-      <div class="equipo1">
-        <p>Alianza Lima</p>
-      </div>
-      <div class="resultado">1 - 0</div>
-      <div class="equipo2">
-        <p>Boca Juniors</p>
-      </div>
-      <div class="fecha">FINAL - 18/02</div>
-      <div class="tipopartido">IDA</div>
-    </div>
+    <button class="botoni" onclick="mostrarReproductor('IDA', '//libertadores.solargentinotv.com.ar/aliboci.js')">
+        <div class="partido">
+            <div class="equipo1"><p>Alianza Lima</p></div>
+            <div class="resultado">1 - 0</div>
+            <div class="equipo2"><p>Boca Juniors</p></div>
+            <div class="fecha">FINAL - 18/02</div>
+            <div class="tipopartido">IDA</div>
+        </div>
+    </button>
     <div class="partido">
       <div class="equipo1">
         <p>Boston River</p>
@@ -203,18 +201,18 @@
       <div class="fecha">FINAL - 25/02</div>
       <div class="tipopartido">VUELTA</div>
     </div>
-    <div class="partido">
-      <div class="equipo1">
-        <p>Boca Juniors</p>
-      </div>
-      <div class="resultado">2 - 1</div>
-      <div class="equipo2">
-        <p>Alianza Lima</p>
-        <div class="penalesa">Alianza Lima ganó 5-4 por penales</div>
-      </div>
-      <div class="fecha">FINAL - 25/02</div>
-      <div class="tipopartido">VUELTA</div>
-    </div>
+    <button class="botonv" onclick="mostrarReproductor('VUELTA', '//libertadores.solargentinotv.com.ar/bocaliv.js')">
+        <div class="partido">
+            <div class="equipo1"><p>Boca Juniors</p></div>
+            <div class="resultado">2 - 1</div>
+            <div class="equipo2">
+                <p>Alianza Lima</p>
+                <div class="penalesa">Alianza Lima ganó 5-4 por penales</div>
+            </div>
+            <div class="fecha">FINAL - 25/02</div>
+            <div class="tipopartido">VUELTA</div>
+        </div>
+    </button>
     <div class="partido">
       <div class="equipo1">
         <p>Ñublense</p>
@@ -271,5 +269,18 @@
       <div class="tipopartido">VUELTA</div>
     </div>
 </div>
+
+      <div id="repro" class="repro">
+        <div id="player"></div>
+    </div>
+    
+    <script>
+        function mostrarReproductor(tipo, archivo) {
+            document.getElementById('repro').style.display = 'block';
+            var script = document.createElement('script');
+            script.src = archivo;
+            document.body.appendChild(script);
+        }
+    </script>
 </body>
 </html>
