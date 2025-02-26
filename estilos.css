@@ -239,6 +239,26 @@ font-weight: 600;
     top: 2.6em;
 }
 
+.penalesi {
+    color: #000;
+    font-weight: 600;
+    margin-left: -4em;
+    position: absolute;
+    top: 1.17em;
+}
+
+.penalesa {
+    color: #000;
+    font-weight: 600;
+    margin-left: -0.5em;
+    position: absolute;
+    top: 2.8em;
+    max-width: 11.95em; /* Ajusta según el diseño */
+    word-wrap: break-word;
+    line-height: 0.7em;
+    font-size: 0.7em;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
