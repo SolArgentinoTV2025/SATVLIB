@@ -2,227 +2,108 @@
 
 /* Estilos Generales */
 body {
-  font-family: 'Conmebol';
+  font-family: 'Conmebol', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #000000; /* Fondo negro */
-  color: #000; /* Letras doradas */
+  background-color: #000; /* Fondo negro */
+  color: #FFD700; /* Letras doradas */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  font-size: 1rem; /* Base en em */
+  font-size: 1rem; /* Base adaptable */
 }
 
-.botoni {
-    all: unset;
-}
-
-.botoni:hover {
-    cursor: pointer;
-    filter: brightness(115%);
-}
-
-.botonv {
-    all: unset;
-}
-
-.botonv:hover {
-    cursor: pointer;
-    filter: brightness(115%);
-}
-
-        .repro {
-            display: none;
-            background: var(--gold-gradient);
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-.aviso {
-position: absolute;
-top: 5em;
-background: var(--gold-gradient);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-font-weight: 700;
-}
-
-/* Colores */
+/* Definir variables de colores */
 :root {
-  --gold-gradient: linear-gradient(45deg, #FFD700, #F8C971, #F1B24D); /* Gradiente dorado */
-  --black: #000000; /* Color negro */
-  --white: #FFFFFF; /* Color blanco */
-  --gray: #888888; /* Gris para textos secundarios */
+  --gold-gradient: linear-gradient(45deg, #FFD700, #F8C971, #F1B24D);
+  --black: #000000;
+  --white: #FFFFFF;
+  --gray: #888888;
 }
 
-/* Estilo para los títulos */
-.fase1 {
-  font-size: 2em;
-  text-align: center;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative; /* Cambio de absolute a relative */
-  margin-top: 3em; /* Asegura que haya espacio antes de la fase 1 */
-  white-space: nowrap;
-  margin-bottom: -2.5em;
-}
-
-.fase2 {
-  font-size: 2em;
-  text-align: center;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative; /* Cambio de absolute a relative */
-  margin-bottom: -2.4em; /* Agrega un margen para separar de Fase 1 */
-  white-space: nowrap;
-}
-
-.fase1, .fase2 {
-font-weight: 700;
-}
-
-h1 {
-  top: 1em;
-}
-
-h2 {
-  top: 3em;
-}
-
-/* Contenedor principal de los partidos */
+/* Contenedor principal */
 #fixture {
-  margin: 5em 0 2em 0; /* Dejar espacio para los títulos */
+  width: 90%;
+  max-width: 75em;
+  margin: 3em auto;
   padding: 1em;
-  background-color: #000000;
+  background-color: #000;
   border-radius: 1em;
   box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 75em;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.tipopartido {
-  font-weight: 400;
-  position: absolute;
-  left: 1em;
-  font-size: 1.4em;
-  color: #fff;
-  text-align: center;
-}
-
-p {
-  color: #000;
-}
-
 /* Partidos */
 .partido {
+  width: 100%;
+  max-width: 50em;
   background: var(--gold-gradient);
-  border-radius: 0.3em;
-  margin-bottom: 0.8em;
-  position: relative;
-  width: 46em;
-  max-width: 60em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
   padding: 1em;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.3);
-}
-
-.tipopartido {
-color: #000;
-font-weight: 600;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.3);
 }
 
 /* Equipos */
 .equipo1, .equipo2 {
-  position: absolute;
-  text-align: justify;
-  width: 50%; /* Ocupa la mitad */
+  flex: 1;
+  text-align: center;
   font-size: 1.2em;
-  font-weight: 700;
-  left: 16em;
-}
-
-.equipo1 {
-  left: 3em;
-}
-
-.equipo2 {
-  right: 6.6em;
+  font-weight: bold;
 }
 
 .equipo1 p, .equipo2 p {
+  margin: 0;
   font-size: 1.2em;
-  color: #000000;
-  text-overflow: ellipsis;
-  margin: 0 5.6em;
-  font-weight: 700;
-  text-align: center;
-}
-
-.equipo2 {
+  color: #000;
 }
 
 /* Resultado */
 .resultado {
-  position: absolute;
-  text-align: center;
   font-size: 1.7em;
   font-weight: bold;
-  color: #000000;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 45.1%;
-}
-
-.rguion {
-  position: absolute;
-  text-align: center;
-  font-size: 1.7em;
-  font-weight: bold;
-  color: #000000;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 48.1%;
+  color: #000;
+  margin: 0 1em;
 }
 
 /* Fechas */
 .fecha {
-  font-size: 1.6em;
-  color: #000000;
-  margin-top: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #FFD700;
   text-align: center;
-  margin-left: 22em;
-  font-weight: 700;
+  width: 100%;
+  margin-top: 0.5em;
 }
 
-/* Responsividad */
-@media (max-width: 48em) {
-  h1 {
-    font-size: 2em;
+/* Responsive: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  #fixture {
+    width: 95%;
   }
 
   .partido {
     flex-direction: column;
-    text-align: center;
-    width: 100%;
+    padding: 0.8em;
   }
 
-  .equipo1 p, .equipo2 p {
-    font-size: 1.2em;
-    margin: 0.5em 0;
+  .equipo1, .equipo2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
   }
 
   .resultado {
     font-size: 1.4em;
+    margin: 0.5em 0;
   }
 
   .fecha {
@@ -230,21 +111,14 @@ font-weight: 600;
   }
 }
 
-@media (max-width: 36em) {
-  h1 {
-    font-size: 1.8em;
-  }
-
-  header {
-    padding: 1.2em 1.5em;
-  }
-
+/* Ajustes para móviles */
+@media (max-width: 480px) {
   .partido {
-    width: 90%;
+    padding: 0.5em;
   }
 
-  .equipo1 p, .equipo2 p {
-    font-size: 1.1em;
+  .equipo1, .equipo2 {
+    font-size: 0.9em;
   }
 
   .resultado {
@@ -254,81 +128,4 @@ font-weight: 600;
   .fecha {
     font-size: 0.9em;
   }
-}
-
-.penales {
-    color: #000;
-    font-weight: 600;
-    margin-left: -4em;
-    position: absolute;
-    top: 2.6em;
-}
-
-.penalesi {
-    color: #000;
-    font-weight: 600;
-    margin-left: -4em;
-    position: absolute;
-    top: 1.17em;
-}
-
-.penalesa {
-    color: #000;
-    font-weight: 600;
-    margin-left: -0.5em;
-    position: absolute;
-    top: 2.8em;
-    max-width: 11.95em; /* Ajusta según el diseño */
-    word-wrap: break-word;
-    line-height: 0.7em;
-    font-size: 0.7em;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #333;
-  font-size: 1em;
-}
-
-.navbar li {
-  padding: 0.625em 1.25em; /* 10px 20px en em */
-}
-
-.navbar a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  transition: opacity 0.3s ease;
-}
-
-.navbar a:hover {
-  opacity: 0.8;
-}
-
-/* Responsive: cambia a menú vertical en pantallas pequeñas */
-@media (max-width: 48em) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar li {
-    padding: 0.5em;
-  }
-}
-
-.logocanal {
-  width: 1.2em;
-  margin-bottom: -0.1em;
-  margin-left: 0.5em;
 }
