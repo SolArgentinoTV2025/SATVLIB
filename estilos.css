@@ -81,7 +81,21 @@ body {
 	/* Agrega un margen para separar de Fase 1 */
 	white-space: nowrap;
 }
-.fase1, .fase2 {
+
+.fase3 {
+	font-size: 2em;
+	text-align: center;
+	background: var(--gold-gradient);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	position: relative;
+	/* Cambio de absolute a relative */
+	margin-bottom: -2.4em;
+	/* Agrega un margen para separar de Fase 1 */
+	white-space: nowrap;
+}
+
+.fase1, .fase2, .fase3 {
 	font-weight: 700;
 }
 h1 {
