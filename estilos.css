@@ -231,6 +231,7 @@ p {
 		font-size: 0.9em;
 	}
 }
+
 .penales {
 	color: #000;
 	font-weight: 600;
@@ -238,6 +239,15 @@ p {
 	position: absolute;
 	top: 2.6em;
 }
+
+.global {
+	color: #000;
+	font-weight: 600;
+	margin-left: -4em;
+	position: absolute;
+	top: 0.1em;
+}
+
 .penalesi {
 	color: #000;
 	font-weight: 600;
