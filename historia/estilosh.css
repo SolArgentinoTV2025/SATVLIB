@@ -407,13 +407,16 @@ img .escudo {
 .equipocolo,
 .equipoatleticnacional,
 .equipovasco {
-    border-bottom: 5px solid #ff0;););
+    ););
     margin-left: -0.4em;
     margin-right: 1.5em;
     background: var(--gold-gradient); /* Aplica el gradiente dorado SOLO al texto */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Hace que solo el texto sea dorado */
+    border-bottom: 5px solid;
+    border-image-source: var(--gold-gradient);
+    border-image-slice: 1;
 }
 
 li.equipo.equipobotafogo {
